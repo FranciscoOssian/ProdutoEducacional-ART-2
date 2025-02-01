@@ -71,8 +71,23 @@
 
 #### **Pontos Chave:**
 
-- Situações de Uso: Cenários onde a performance é crucial.
+- Situações de Uso: Cenários onde a performance é crucial.# Aplicações Reais da ART-1 e ART-2
 
+- **ART-1:**
+  - **Reconhecimento de Caracteres e Dígitos Binários:** 
+    Utilizada quando as imagens ou sinais são pré-processados em padrões 0/1.
+  - **Sistemas de Diagnóstico Industrial:** 
+    Detecta falhas em linhas de produção por meio de dados binários de sensores.
+  - **Classificação Binária de Sinais Biomédicos:** 
+    Análise de sinais binários (ECG/EEG) para identificar padrões de normalidade ou patologias.
+
+- **ART-2:**
+  - **Clusterização de Imagens em Tons de Cinza:** 
+    Segmenta e agrupa imagens médicas ou industriais baseadas em níveis de cinza.
+  - **Análise de Sinais de Áudio:** 
+    Para tarefas de reconhecimento de fala ou música, processando vetores de características contínuas.
+  - **Aplicações em Robótica e Controle:** 
+    Classifica estados de sistemas contínuos para navegação ou tomada de decisão em ambientes dinâmicos.
 ---
 
 ### 5. **Estrutura Topológica, Princípios e Algoritmo da ART-2**
