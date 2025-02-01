@@ -17,7 +17,7 @@
   - Infográficos.
   - Projeto prático.
 - **Gancho:**
-  > “Quantos de vocês já ouviram falar das redes ART antes? Caso não, preparem-se para conhecer uma abordagem bastante interessante e pouco comentada.”
+  > “Vocês já ouviram falar das redes ART antes? Caso não, preparem-se para conhecer uma abordagem bastante interessante e pouco comentada.”
 
 ---
 
@@ -27,7 +27,7 @@
 
 > “As Redes de Ressonância Adaptativa, ou ART, foram criadas por Stephen Grossberg e Gail Carpenter para resolver um problema fundamental em redes neurais: como aprender continuamente sem esquecer o que já foi aprendido? Essa questão, chamada de dilema estabilidade-plasticidade, motivou a criação dessas redes incrivelmente inovadoras.”
 
-> “A ART-1 foi a primeira variante e foi projetada para trabalhar com dados binários (0 ou 1). Ela possui duas camadas principais: a camada de comparação F1 e a camada de reconhecimento F2. O que faz a ART ser tão única é seu parâmetro de vigilância, que decide se um novo cluster deve ser criado com base na similaridade dos dados.”
+> “A ART-1 foi a primeira variante e foi projetada para trabalhar com dados binários (0 ou 1). Ela possui duas camadas principais: a camada de comparação F1 e a camada de reconhecimento F2. Troca. O que faz a ART ser tão única é seu parâmetro de vigilância, que decide se um novo cluster deve ser criado com base em uma similaridade mínima dos dados.”
 
 #### **Pontos Chave:**
 
@@ -53,13 +53,8 @@
 
 #### **Pontos Chave:**
 
-- **Principais Componentes:**
-  - Camada F0 (normalização).
-  - Camada F1 (comparação).
-  - Camada F2 (armazenamento dos protótipos).
-  - Mecanismo de reset.
-- **Exemplo prático:**
-  > “Imaginem um sistema de recomendação que precisa lidar com dados complexos, como avaliações de filmes de 0 a 10 e históricos de navegação.”
+- **Tabela Comparativa:**
+Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais simples, a ART-2 lida com entradas contínuas e, por isso, exige um pré-processamento mais elaborado, como normalização e supressão de ruído. Além disso, a ART-2 possui um número maior de parâmetros para ajuste, permitindo o reconhecimento de padrões mais complexos e sinais contínuos. Ambas têm como parâmetro central o nível de vigilância, que define a sensibilidade da rede em detectar novas categorias
 
 ---
 
@@ -67,7 +62,7 @@
 
 #### **Fala do Apresentador:**
 
-> “A ART-2-A é uma versão mais simples da ART-2. Ela foi criada para reduzir a complexidade computacional mantendo a capacidade de lidar com dados contínuos. Essa simplificação é bastante vantajosa em cenários onde a performance é crucial.”
+> “A ART-2-A é uma versão mais simples da ART-2. Ela foi criada para reduzir a complexidade computacional mantendo a capacidade de lidar com dados contínuos. Essa simplificação é bem vantajosa em cenários onde a performance é crucial.”
 
 #### **Pontos Chave:**
 
