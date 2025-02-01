@@ -94,7 +94,7 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
 
 #### **Slide: Topologia da ART-2**
 
-**Fala:**
+**Fala Sugerida:**
 > “A ART-2 possui quatro componentes principais:
 > 1. **Camada de Entrada (F0):** Recebe e normaliza o vetor de entrada.
 > 2. **Camada de Comparação (F1):** Compara a entrada normalizada com os protótipos.
@@ -109,14 +109,14 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
 
 #### **Slide (Imagem da Estrutura da ART-2)**
 
-**Fala:**
+**Fala Sugerida:**
 > “Nesta imagem, vemos as camadas conectadas. Além dos blocos principais, existem etapas para normalização e supressão de ruído. Tudo isso garante que a rede consiga processar dados contínuos de forma mais robusta.”
 
 ---
 
 #### **Slide: Princípios de Funcionamento**
 
-**Fala:**
+**Fala Sugerida:**
 > “A ART-2 se baseia em quatro princípios fundamentais:
 > 1. **Ressonância:** Se a entrada for similar o bastante a um protótipo, ocorre a ressonância e esse protótipo é atualizado.
 > 2. **Reset:** Se não houver similaridade suficiente, inibimos o protótipo atual e testamos outro. Caso nenhum seja compatível, criamos um novo cluster.
@@ -130,7 +130,7 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
 
 #### **Slide: Algoritmo de Treinamento (Parte 1)**
 
-**Fala:**
+**Fala Sugerida:**
 > “Para treinar a ART-2, seguimos estes passos:
 > 1. **Inicialização:** Definimos os pesos iniciais e a vigilância (ρ).
 > 2. **Apresentação da Entrada:** Recebemos o vetor de entrada.
@@ -141,7 +141,7 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
 
 #### **Slide: Algoritmo de Treinamento (Parte 2)**
 
-**Fala:**
+**Fala Sugerida:**
 > “Dando continuidade:
 > 5. **Ressonância ou Reset:**
 >    - **Ressonância:** Se a similaridade ≥ ρ, o protótipo vencedor é ajustado para ficar mais próximo da entrada.
@@ -153,23 +153,30 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
 
 ---
 
-#### **Slide (Imagens 6 e 9)**
+#### **Slide (Imagens com os cálculos de similaridade)**
 
-**Fala:**
-> “Estas imagens ilustram graficamente a evolução do protótipo e a dinâmica de ressonância/reset. A cada etapa, se o padrão é aceito, o protótipo ‘se move’ em direção à entrada. Caso contrário, partimos para um novo cluster.”
+**Fala Sugerida:**
+> “Aqui, vemos um exemplo prático de como a comparação é feita. Temos dois protótipos (Y1 e Y2) armazenados, e o vetor de entrada está normalizado em [0.81, 0.59]. 
+> - Primeiro, calculamos a similaridade com Y1 e obtivemos 0.93, que é menor que o parâmetro de vigilância ρ = 0.95.
+> - Em seguida, com Y2, a similaridade foi 0.98, maior que 0.95, cumprindo o critério de vigilância.
+> Dessa forma, o protótipo Y2 entra em ressonância e é atualizado, enquanto Y1 é inibido para essa entrada.”
+
+**Destaque:**
+- Explique rapidamente o cálculo (ex.: `S1*Y1 + S2*Y2` etc.).
+- Mostre por que 0.93 < 0.95 leva a reset/inibição e 0.98 > 0.95 leva a ressonância.
 
 ---
 
 #### **Slide: Detalhes do Pré-processamento e Comparação (F1)**
 
-**Fala:**
+**Fala Sugerida:**
 > “A camada F1 realiza normalização, supressão de ruído e a comparação preliminar com os protótipos. Isso é crucial para lidar com dados contínuos — a rede ART-2 se torna menos sensível a variações de escala e ruídos, o que é uma grande vantagem em cenários práticos.”
 
 ---
 
 #### **Slide: Conclusão (Dessa Seção)**
 
-**Fala:**
+**Fala Sugerida:**
 > “Concluindo, a ART-2 é poderosa para clusterização incremental de dados contínuos, graças à sua estrutura de ressonância, reset e pré-processamento. Apesar de ser mais complexa que a ART-1, ela pode ser decisiva em aplicações que exigem flexibilidade sem perder a memória dos clusters já formados.”
 
 **Resumo de Pontos-Chave:**
