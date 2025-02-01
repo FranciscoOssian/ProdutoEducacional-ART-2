@@ -85,27 +85,98 @@ Enquanto a ART-1 trabalha com dados binários e apresenta uma estrutura mais sim
     Classifica estados de sistemas contínuos para navegação ou tomada de decisão em ambientes dinâmicos.
 ---
 
-### 5. **Estrutura Topológica, Princípios e Algoritmo da ART-2**
+### 5. **Estrutura Topológica, Princípios e Algoritmo da ART-2** 
 
-#### **Fala do Apresentador:**
-
-> “Agora vamos entender a estrutura da ART-2 e os princípios que orientam seu funcionamento. A rede possui uma arquitetura que permite lidar com dados complexos de maneira incremental.”
-
-> “Um dos grandes diferenciais da ART-2 é seu mecanismo de ressonância. Quando a rede encontra um padrão que se parece com um protótipo existente, ela entra em ressonância e atualiza aquele protótipo. Caso contrário, um reset é acionado, e um novo cluster é criado.”
-
-#### **Pontos Chave:**
-
-- **Princípios:**
-  - Ressonância.
-  - Reset.
-  - Aprendizado incremental.
-  - Estabilidade-plasticidade.
-
-#### **Dica:**
-
-> “Imaginem um clube exclusivo que aceita novos membros somente se eles forem parecidos o suficiente com os antigos.”
+#### **Fala do Apresentador (Introdução):**
+> “Agora vamos entender em detalhes a estrutura da ART-2 e os princípios que orientam seu funcionamento. Ela foi projetada para lidar com dados contínuos e, por isso, apresenta uma topologia mais complexa que a ART-1.”
 
 ---
+
+#### **Slide: Topologia da ART-2**
+
+**Fala:**
+> “A ART-2 possui quatro componentes principais:
+> 1. **Camada de Entrada (F0):** Recebe e normaliza o vetor de entrada.
+> 2. **Camada de Comparação (F1):** Compara a entrada normalizada com os protótipos.
+> 3. **Camada de Reconhecimento (F2):** Armazena os protótipos em si; cada nó aqui representa um cluster.
+> 4. **Mecanismo de Reset:** Cria novos clusters quando a similaridade com protótipos existentes não atinge um certo nível de vigilância.”
+
+**Pontos-Chave:**
+- Explique o papel de cada camada (F0, F1, F2).
+- Destaque que o **reset** é o que permite a criação de novos clusters.
+
+---
+
+#### **Slide (Imagem da Estrutura da ART-2)**
+
+**Fala:**
+> “Nesta imagem, vemos as camadas conectadas. Além dos blocos principais, existem etapas para normalização e supressão de ruído. Tudo isso garante que a rede consiga processar dados contínuos de forma mais robusta.”
+
+---
+
+#### **Slide: Princípios de Funcionamento**
+
+**Fala:**
+> “A ART-2 se baseia em quatro princípios fundamentais:
+> 1. **Ressonância:** Se a entrada for similar o bastante a um protótipo, ocorre a ressonância e esse protótipo é atualizado.
+> 2. **Reset:** Se não houver similaridade suficiente, inibimos o protótipo atual e testamos outro. Caso nenhum seja compatível, criamos um novo cluster.
+> 3. **Aprendizado Incremental:** Cada nova entrada ajusta os protótipos já existentes, sem apagar o conhecimento anterior.
+> 4. **Estabilidade-Plasticidade:** Controlada pelo parâmetro de vigilância (ρ), que equilibra a manutenção dos clusters (estabilidade) e a capacidade de criar novos (plasticidade).”
+
+**Dica de Analogias:**
+> “Imaginem um clube exclusivo: se a pessoa (entrada) se parece com os membros do clube, ela entra e ajuda a moldar esse clube; caso contrário, forma-se um clube novo.”
+
+---
+
+#### **Slide: Algoritmo de Treinamento (Parte 1)**
+
+**Fala:**
+> “Para treinar a ART-2, seguimos estes passos:
+> 1. **Inicialização:** Definimos os pesos iniciais e a vigilância (ρ).
+> 2. **Apresentação da Entrada:** Recebemos o vetor de entrada.
+> 3. **Normalização (F0):** Ajustamos a escala dos dados para garantir consistência.
+> 4. **Comparação (F2):** Checamos a similaridade entre a entrada normalizada e os protótipos existentes.”
+
+---
+
+#### **Slide: Algoritmo de Treinamento (Parte 2)**
+
+**Fala:**
+> “Dando continuidade:
+> 5. **Ressonância ou Reset:**
+>    - **Ressonância:** Se a similaridade ≥ ρ, o protótipo vencedor é ajustado para ficar mais próximo da entrada.
+>    - **Reset:** Se a similaridade < ρ, inibimos esse protótipo e tentamos outro. Se nenhum atende aos critérios, criamos um novo cluster.
+> 6. **Repetir:** Repetimos esses passos para todas as amostras, de forma incremental.”
+
+**Observação:**
+- Enfatize que esse processo acontece para cada padrão de entrada, permitindo a criação de quantos clusters forem necessários.
+
+---
+
+#### **Slide (Imagens 6 e 9)**
+
+**Fala:**
+> “Estas imagens ilustram graficamente a evolução do protótipo e a dinâmica de ressonância/reset. A cada etapa, se o padrão é aceito, o protótipo ‘se move’ em direção à entrada. Caso contrário, partimos para um novo cluster.”
+
+---
+
+#### **Slide: Detalhes do Pré-processamento e Comparação (F1)**
+
+**Fala:**
+> “A camada F1 realiza normalização, supressão de ruído e a comparação preliminar com os protótipos. Isso é crucial para lidar com dados contínuos — a rede ART-2 se torna menos sensível a variações de escala e ruídos, o que é uma grande vantagem em cenários práticos.”
+
+---
+
+#### **Slide: Conclusão (Dessa Seção)**
+
+**Fala:**
+> “Concluindo, a ART-2 é poderosa para clusterização incremental de dados contínuos, graças à sua estrutura de ressonância, reset e pré-processamento. Apesar de ser mais complexa que a ART-1, ela pode ser decisiva em aplicações que exigem flexibilidade sem perder a memória dos clusters já formados.”
+
+**Resumo de Pontos-Chave:**
+- F0 (entrada), F1 (comparação), F2 (armazenamento de protótipos), Reset.
+- Ressonância, Reset, Aprendizado incremental, Estabilidade-plasticidade.
+- Parâmetro ρ (vigilância) como fator de controle de granularidade.
+
 
 ### 6. **Aspectos de Implementação Prática e Projeto Prático**
 
