@@ -1,5 +1,7 @@
 # Produto Educacional ART2: Redes Neurais Adaptativas - Material Didático (UECE)
 
+Veja o curso em forma de vídeo disponível no youtube: https://www.youtube.com/playlist?list=PL1RKSRiqkfO6EWg4DdMoHGm64IeRn9NMA
+
 Este repositório contém o material didático completo para o minicurso sobre Redes Neurais ART2, desenvolvido por alunos da disciplina de Redes Neurais Artificiais do curso de Ciência da Computação da Universidade Estadual do Ceará (UECE).
 
 ## Sobre o Minicurso
